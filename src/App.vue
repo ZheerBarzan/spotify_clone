@@ -37,7 +37,7 @@ let openMenu = ref(false);
 
                 <button class="bg-black hover:bg-[#282828] rounded-full cursor-pointer p-0.5 mr-8 mt-0.5">
                   <div class="flex items-center">
-                    <img src="" alt="" class="rounded-full" width="27">
+                    <img src="../src/assets/spotify.png" alt="" class="rounded-full" width="27">
                   </div>
                 </button>
 
