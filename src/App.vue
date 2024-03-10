@@ -35,11 +35,29 @@ let openMenu = ref(false);
                     </button>
                 </div>
 
-                <button class="bg-black hover:bg-[#282828] rounded-full cursor-pointer p-0.5 mr-8 mt-0.5">
+                <button 
+                @click="openMenu = !openMenu" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
+                
+                class="bg-black hover:bg-[#282828] rounded-full cursor-pointer p-0.5 mr-8 mt-0.5">
                   <div class="flex items-center">
                     <img src="../src/assets/spotify.png" alt="" class="rounded-full" width="27">
+                    <div class="text-white ml-1.5 text-[14px] font-semibold">Zheer Barzan</div>
+                    <cheveronDown v-if="!openMenu" @click="openMenu = true" :size="20" fillColor="white" />
+                    <cheveronUP v-else @click="openMenu = false" :size="20" fillColor="white" />
                   </div>
                 </button>
+
+                <span 
+                 v-if="openMenu"
+                 class="fixed w-[190px] bg-[#282828] shadow-2xl z-50 rounded-sm top-[52px] right-[35px] p-1 cursor-pointer"
+                >
+                <ul class="text-grey-200 font-semibold text-[14px]">
+                  <li class="px-3 py-2 text-white hover:bg-[#3E3D3D] hover:text-green-500 border-b border-b-grey-600">Profile</li>
+                  <li class="px-3 py-2 text-white hover:bg-[#3E3D3D] hover:text-red-500  ">Logout</li>
+
+                </ul>
+
+                </span>
 
     </div>
  </div>
