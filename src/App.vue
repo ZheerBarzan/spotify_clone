@@ -1,6 +1,7 @@
 <script setup>
 import { ref, } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
+import { MenuItem} from "./components/MenuItem.vue";
 
 import cheveronUP from 'vue-material-design-icons/ChevronUp.vue';
 import cheveronDown from 'vue-material-design-icons/ChevronDown.vue';
@@ -73,6 +74,7 @@ let openMenu = ref(false);
     <div class="my-8"></div>
     <ul>
       <RouterLink to="/">
+        <MenuItem iconString="home" iconSize="20" name="Home" pageUrl="/"/>
     </RouterLink>
 
     </ul>
