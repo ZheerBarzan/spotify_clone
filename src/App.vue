@@ -35,6 +35,7 @@ let openMenu = ref(false);
                     <cheveronRight :size="30" fillColor="white" />
                     </button>
                 </div>
+                
 
                 <button 
                 @click="openMenu = !openMenu" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"

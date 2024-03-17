@@ -61,6 +61,10 @@ const isHover = () =>{
 
 <img :src="`/public/images/icons/${icon}.png`" :width="iconSize" >
 
+<div :class="textisHovered ? 'text-white' : 'text-gray-400'"
+class="ml-4 text-[14px] font-semibold mt-0.5"
+></div>
+
 
 </li>
 
